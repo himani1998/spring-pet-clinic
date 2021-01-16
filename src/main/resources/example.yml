@@ -1,0 +1,36 @@
+# for comment in YAML
+
+name: Himani
+
+names: #comment
+    -John
+    -Stephen
+    -Red
+    -Helly
+
+pound_sign: "#"
+
+book:
+    author: Joe Buck
+    publisher: random house
+
+truth: yes
+
+another_truth: True
+
+more_true: true
+
+false: no #no,FALSE, false
+
+string_val: "This is it's quote"
+
+colon_string: "My courses: one two three"
+
+include_new_lines: |
+  sggs hshds sdj
+  dshgd dhbh dhgb
+  dhdh djhhj djhj
+
+ignore_new_lines: >
+  hfdh dshgh djhhf
+  djhfudhh

@@ -1,0 +1,5 @@
+himani:
+  jms:
+    username: JMS john
+    password: somepassword
+    url: dejfabcd
