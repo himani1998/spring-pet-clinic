@@ -1,6 +1,7 @@
 package himani.spring.pet.springpetclinic.bootstrap;
 
 import himani.spring.pet.springpetclinic.model.Owner;
+import himani.spring.pet.springpetclinic.model.Pet;
 import himani.spring.pet.springpetclinic.model.PetType;
 import himani.spring.pet.springpetclinic.model.Vet;
 import himani.spring.pet.springpetclinic.services.OwnerService;
@@ -8,6 +9,8 @@ import himani.spring.pet.springpetclinic.services.PetTypeService;
 import himani.spring.pet.springpetclinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -35,13 +38,30 @@ public class DataLoader implements CommandLineRunner {
         Owner owner1= new Owner();
         owner1.setFirstName("Michael");
         owner1.setLastName("Weston");
+        owner1.setAddress(" 1234 Wiliston Plaza");
+        owner1.setCity("Miami");
+        owner1.setTelephone("0987654321");
 
+        Pet myPet= new Pet();
+        myPet.setPetType(saveDogPetType);
+        myPet.setOwner(owner1);
+        myPet.setBirthDate(LocalDate.now());
+        myPet.setName("Rocky");
+        owner1.getPets().add(myPet);
         ownerService.save(owner1);
 
         Owner owner2= new Owner();
         owner2.setFirstName("Cisco");
         owner2.setLastName("White");
-
+        owner2.setAddress(" 765 Butler Plaza");
+        owner2.setCity("Gainesville");
+        owner2.setTelephone("0982762635421");
+        Pet ciscoPet= new Pet();
+        ciscoPet.setPetType(saveCatPetType);
+        ciscoPet.setOwner(owner2);
+        ciscoPet.setBirthDate(LocalDate.now());
+        ciscoPet.setName("kitti");
+        owner2.getPets().add(ciscoPet);
         ownerService.save(owner2);
         System.out.println("Loaded Owners....");
 
