@@ -1,31 +1,32 @@
 package himani.spring.pet.springpetclinic.services.map;
 
-import himani.spring.pet.springpetclinic.model.Vet;
+
+import himani.spring.pet.springpetclinic.model.Pet;
 import himani.spring.pet.springpetclinic.services.CrudService;
-import himani.spring.pet.springpetclinic.services.VetService;
+import himani.spring.pet.springpetclinic.services.PetService;
 import org.springframework.stereotype.Service;
 import java.util.Set;
 
 @Service
-public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService {
+public class PetMapService extends AbstractMapService<Pet,Long> implements PetService {
 
     @Override
-    public Set<Vet> findAll() {
+    public Set<Pet> findAll() {
         return super.findAll();
     }
 
     @Override
-    public Vet findById(Long id) {
+    public Pet findById(Long id) {
         return super.findById(id);
     }
 
     @Override
-    public Vet save(Vet object) {
+    public Pet save(Pet object) {
         return super.save(object);
     }
 
     @Override
-    public void Delete(Vet object) {
+    public void Delete(Pet object) {
         super.Delete(object);
     }
 
