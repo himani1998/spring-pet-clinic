@@ -6,12 +6,14 @@ import himani.spring.pet.springpetclinic.services.CrudService;
 import himani.spring.pet.springpetclinic.services.OwnerService;
 import himani.spring.pet.springpetclinic.services.PetService;
 import himani.spring.pet.springpetclinic.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Service
+@Profile({"default","map"})
 public class OwnerMapService extends AbstractMapService<Owner,Long> implements OwnerService {
     private final PetTypeService petTypeService;
     private final PetService petService;
