@@ -2,9 +2,11 @@ package himani.spring.pet.springpetclinic.services.map;
 
 import himani.spring.pet.springpetclinic.model.Visit;
 import himani.spring.pet.springpetclinic.services.VisitService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VisitMapService extends AbstractMapService<Visit,Long> implements VisitService {
 
     @Override
